@@ -18676,7 +18676,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_bg_1 {
-    background-image: url(../images/banner/banner.png);
+    background-image: url(../images/banner.png);
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
@@ -19801,7 +19801,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-    background-image: url(../images/banner/bradcam.png);
+    background-image: url(../images/banner.png);
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
@@ -26240,3 +26240,128 @@ h3 {
 
 
 /* # sourceMappingURL=bootstrap.min.css.map */
+.courcses{
+    display: flex;
+}
+.cr1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.cr2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.crs {
+    font-size: 400%;
+    color: #0A8CFF;
+    width:100%;
+    font-weight: bold;
+}
+.crs2 {
+    font-size: 400%;
+    color: #0A8CFF;
+    width:100%;
+    font-weight: bold;
+}
+.delete {
+    margin-left:3%;
+    background-color: black;
+    color:white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.cart {
+    width:100%;
+
+}
+.item {
+    font-size: x-large;
+    border-bottom: 2px solid black;
+    margin-bottom: 2%;
+}
+
+.item_m {
+    display: flex;
+    flex-direction: column;
+}
+.temp {
+    display: flex;
+}
+.item_ico {
+    margin-top:1%;
+    margin-left: 2%;
+    flex-basis: 10%;
+    width: 20%;
+    flex-direction: row;;
+    margin-bottom: 1%;
+    display: flex;
+}
+.item_t {
+background-color: white;
+}
+.item_text {
+    margin-left: 1%;
+    flex-direction: column;
+    background-color:white;
+}
+.item_i {
+    display: flex;
+    flex-direction: column;
+}
+.displ {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+
+}
+
+.text2{
+    width:100%;
+    background: white;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+.fj {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 99%;
+    margin-bottom: 1%;
+}
+.displ2 {
+    display: flex;
+}
+.displ3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    justify-content: flex-end;
+    background: white;
+
+}
+.text3 {
+    background-color: white;
+}
+.imgr {
+    !important;display:flex;
+    !important;flex-direction: row;
+
+}
+.sprr {
+!important;display:flex;
+!important;flex-direction: row;
+
+
+}
+.svo {
+    align-items: center;
+
+}

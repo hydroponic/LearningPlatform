@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Oprosnik.com</title>
+    <title>Learner.com</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,10 +24,9 @@
 
 
 
-
 <div width='100%' style=" margin-top:15vh; margin-bottom:10%; display: flex; justify-content: center; align-items: center;flex-direction: column">
 
-<h1>Спасибо за подписку!</h1>
+<h1>Спасибо за покупку!</h1>
 <a href="{{route('home')}}"><button style="margin-top: 1vh;" class="boxed-btn3 w-100 " type="submit">Домой</button></a>
 </div>
 <!-- footer start -->
@@ -39,11 +38,11 @@
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="footer_logo">
                             <a href="{{route('home')}}">
-                                <img src="{{asset('images/logotm.png')}}" style="width: 95%;" alt="">
+                                <img src="{{asset('images/logotm4.png')}}" style="width: 95%;" alt="">
                             </a>
                         </div>
                         <p>
-                            oprosnik@support.com <br>
+                            learner@support.com <br>
                             8 (800) 555-35-35<br>
                             д.78, стр.3, Проспект Вернадского, Москва, Россия
                         </p>
