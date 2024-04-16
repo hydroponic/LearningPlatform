@@ -37,8 +37,8 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                <a href="{{route('home')}}">
+                                    <img src="{{URL::asset('images/logo.png')}}" style="width: 78%;" alt="">
                                 </a>
                             </div>
                         </div>
@@ -48,24 +48,26 @@
                                     <ul id="navigation">
                                         <li><a href="#">программы <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="modules.html">конструктор курсов </a></li>
-                                                <li><a href="courses.html">готовые курсы </a></li>
+                                                <li><a href="{{route('tests')}}">конструктор курсов </a></li>
+                                                <li><a href="{{route('ready')}}">готовые курсы </a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="learning.html">обучение </a></li>
-                                        <li><a href="about.html">о нас </a></li>
-                                        <li><a href="contact.html">контакты</a></li>
+                                        <li><a href="{{route('my')}}">обучение </a></li>
+                                        <li><a href="{{route('contacts')}}">о нас </a></li>
+                                        <li><a href="{{route('contacts')}}">контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
-                                @if(!Auth::check())
-                                    <a class="boxed-btn3" href="{{route('login')}}">войти</a>
-                                @else  <a style="color: white" class="fa fa-shopping-basket fa-2x fa-stack" href="{{route('cart')}}"></a>
-                                <a style='color:red' class="fa fa-sign-out fa-2x fa-stack" href="{{route('logout')}}"></a>
-                                @endif
+                                <div class="d-none d-lg-block">
+                                    @if(!Auth::check())
+                                        <a class="boxed-btn3" href="{{route('login')}}">войти</a>
+                                    @else  <a style="color: white" class="fa fa-shopping-basket fa-2x fa-stack" href="{{route('cart')}}"></a>
+                                    <a style='color:red' class="fa fa-sign-out fa-2x fa-stack" href="{{route('logout')}}"></a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         <div class="col-12">
@@ -73,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -102,7 +103,7 @@
                     <div class="single_jobs white-bg d-flex justify-content-between">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
-                                <img src="img/svg_icon/htm.jpg" alt="">
+                                <img width="200%" height="160%" style="position: relative; top:-1.7vh; left:-1.1vw; border-radius: 5px" src="{{URL::asset('images/m-'.$_GET['id'].'.jpg')}}" alt="">
                             </div>
                             <div class="jobs_conetent">
                                 <h4>Вёрстка сайтов</h4>
@@ -185,8 +186,8 @@
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="footer_logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="">
+                            <a href="{{route('home')}}">
+                                <img src="{{URL::asset('images/logo.png')}}" style="width: 78%;" alt="">
                             </a>
                         </div>
                         <p>
@@ -212,10 +213,10 @@
                             Обучение
                         </h3>
                         <ul>
-                            <li><a href="#">Программы</a></li>
-                            <li><a href="#">Курсы</a></li>
+                            <li><a href="{{route('tests')}}">Программы</a></li>
+                            <li><a href="{{route('tests')}}">Курсы</a></li>
                             <li><a href="#">Акции</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="{{route('contacts')}}">FAQ</a></li>
                         </ul>
 
                     </div>
@@ -226,8 +227,8 @@
                             Информация
                         </h3>
                         <ul>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="{{route('contacts')}}">Контакты</a></li>
+                            <li><a href="{{route('home')}}">Отзывы</a></li>
                             <li><a href="#">Лицензия</a></li>
                             <li><a href="#">Договор-оферта</a></li>
                         </ul>

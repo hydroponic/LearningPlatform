@@ -42,7 +42,7 @@
                                         <li><a href="">программы <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{{route('tests')}}">конструктор курсов </a></li>
-                                                <li><a href="courses.html">готовые курсы </a></li>
+                                                <li><a href="{{route('ready')}}">готовые курсы </a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('my')}}">обучение </a></li>

@@ -44,7 +44,6 @@ class CartController extends Controller
                 foreach ($ffs as $f) {
                     $g = $f->toArray();
                     $is[$g['id']]=$g['dsc'];
-
             }
             foreach ($tmp as $r)
             {
@@ -52,7 +51,7 @@ class CartController extends Controller
                 array_push($res2, $is[$r]);
             }
 
-        return view('my', ['descs'=>$f, 'cources'=>$res, 'user'=>Auth::user(),'cour'=>Test::get()]); }
+        return view('my', ['descs'=>$res2, 'cources'=>$res, 'user'=>Auth::user(),'cour'=>Test::get()]); }
         else return view('my', ['descs'=>NULL, 'cources'=>$res, 'user'=>Auth::user(),'cour'=>Test::get()]);
     }
 }

@@ -43,7 +43,7 @@
                                         <li><a href="">программы <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{{route('tests')}}">конструктор курсов </a></li>
-                                                <li><a href="courses.html">готовые курсы </a></li>
+                                                <li><a href="{{route('ready')}}">готовые курсы </a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('my')}}">обучение </a></li>
@@ -119,6 +119,41 @@
                             unset($cp[$key]);
                             session(['cart'=>$cp]);}
                         if(isset($_GET['cart']))
+                            if (stripos($_GET['cart'], ',')) {
+                                $mas=preg_split('/,/', $_GET['cart']);
+                                foreach ($mas as $m) {
+                                    if (!session('cart'))
+                                    { $flag=0;
+                                        $i=0;
+                                        foreach($cources as $crs) {
+                                            foreach (\App\Models\Test::all() as $tmp)
+                                            {
+                                                if($tmp->id==$m)
+                                                    $i=$tmp->title;
+                                            }
+                                            if ($crs==$i)
+                                                $flag=1;}
+                                        if (!$flag)
+                                            session()->push('cart', $m);}
+                                    else
+                                        if(!in_array($m, session('cart')))
+                                        { $flag=0;
+                                            $i=0;
+                                            foreach($cources as $crs) {
+                                                foreach (\App\Models\Test::all() as $tmp)
+                                                {
+                                                    if($tmp->id==$m)
+                                                        $i=$tmp->title;
+                                                }
+                                                if ($crs==$i)
+                                                    $flag=1;}
+                                            if (!$flag)
+                                                session()->push('cart', $m);}
+                                }
+
+
+                            }
+                        else {
                             if (!session('cart'))
                             { $flag=0;
                                 $i=0;
@@ -145,7 +180,7 @@
                                         if ($crs==$i)
                                             $flag=1;}
                                     if (!$flag)
-                                        session()->push('cart', $_GET['cart']);} ?>
+                                        session()->push('cart', $_GET['cart']);}} ?>
 
                         @if(session('cart'))
                             @foreach(session('cart') as $cr)
@@ -206,92 +241,93 @@
         </div>
     </div>
 </div>
+</div>
 
 
 <!-- footer start -->
-<footer class="footer">
-    <div class="footer_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="footer_logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="">
-                            </a>
-                        </div>
-                        <p>
-                            educato@support.com<br>
-                            8 (800) 555-85-85<br>
-                            д.78, стр.3, Проспект Вернадского,<br>
-                            Москва, Россия
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="footer_logo">
+                                <a href="{{route('home')}}">
+                                    <img src="{{URL::asset('images/logo.png')}}" style="width: 78%;" alt="">
+                                </a>
+                            </div>
+                            <p>
+                                educato@support.com<br>
+                                8 (800) 555-85-85<br>
+                                д.78, стр.3, Проспект Вернадского,<br>
+                                Москва, Россия
 
-                        </p>
-                        <div class="socail_links">
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+                            <h3 class="footer_title">
+                                Обучение
+                            </h3>
                             <ul>
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="{{route('tests')}}">Программы</a></li>
+                                <li><a href="{{route('tests')}}">Курсы</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="{{route('contacts')}}">FAQ</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+                            <h3 class="footer_title">
+                                Информация
+                            </h3>
+                            <ul>
+                                <li><a href="{{route('contacts')}}">Контакты</a></li>
+                                <li><a href="{{route('home')}}">Отзывы</a></li>
+                                <li><a href="#">Лицензия</a></li>
+                                <li><a href="#">Договор-оферта</a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-2 col-md-6 col-lg-2">
-                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
-                        <h3 class="footer_title">
-                            Обучение
-                        </h3>
-                        <ul>
-                            <li><a href="#">Программы</a></li>
-                            <li><a href="#">Курсы</a></li>
-                            <li><a href="#">Акции</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
-                        <h3 class="footer_title">
-                            Информация
-                        </h3>
-                        <ul>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Лицензия</a></li>
-                            <li><a href="#">Договор-оферта</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
-                        <h3 class="footer_title">
-                            Подписка
-                        </h3>
-                        <form action="#" class="newsletter_form">
-                            <input type="text" placeholder="Введите ваш E-mail">
-                            <button type="submit">Подписаться</button>
-                        </form>
-                        <p class="newsletter_text">Подпишитесь и получайте актуальную информацию о новых программах и скидках.</p>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
+                            <h3 class="footer_title">
+                                Подписка
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Введите ваш E-mail">
+                                <button type="submit">Подписаться</button>
+                            </form>
+                            <p class="newsletter_text">Подпишитесь и получайте актуальную информацию о новых программах и скидках.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
-        <div class="container">
-            <div class="footer_border"></div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <p class="copy_right text-center">
-                        Copyright &copy; Educato, <script>document.write(new Date().getFullYear());</script>
-                    </p>
+        <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            Copyright &copy; Educato, <script>document.write(new Date().getFullYear());</script>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 

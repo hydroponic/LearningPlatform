@@ -30,7 +30,7 @@
 <a href="{{route('home')}}"><button style="margin-top: 1vh;" class="boxed-btn3 w-100 " type="submit">Домой</button></a>
 </div>
 <!-- footer start -->
-<footer class="footer" style="height: 100vh; !important;">
+<footer class="footer">
     <div class="footer_top">
         <div class="container">
             <div class="row">
@@ -38,49 +38,36 @@
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="footer_logo">
                             <a href="{{route('home')}}">
-                                <img src="{{asset('images/logotm4.png')}}" style="width: 95%;" alt="">
+                                <img src="{{URL::asset('images/logo.png')}}" style="width: 78%;" alt="">
                             </a>
                         </div>
                         <p>
-                            learner@support.com <br>
-                            8 (800) 555-35-35<br>
-                            д.78, стр.3, Проспект Вернадского, Москва, Россия
+                            educato@support.com<br>
+                            8 (800) 555-85-85<br>
+                            д.78, стр.3, Проспект Вернадского,<br>
+                            Москва, Россия
+
                         </p>
                         <div class="socail_links">
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
                         <h3 class="footer_title">
-                            Company
+                            Обучение
                         </h3>
                         <ul>
-                            <li><a href="{{route('contacts')}}">Контакты </a></li>
-
+                            <li><a href="{{route('tests')}}">Программы</a></li>
+                            <li><a href="{{route('tests')}}">Курсы</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="{{route('contacts')}}">FAQ</a></li>
                         </ul>
 
                     </div>
@@ -88,33 +75,30 @@
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
                         <h3 class="footer_title">
-                            Category
+                            Информация
                         </h3>
                         <ul>
-                            <li><a href="/home#themes1">Темы</a></li>
-                            <li><a href="/home#tests1">Тесты</a></li>
-                            <li><a href="{{route('themes')}}">Создать</a></li>
-
+                            <li><a href="{{route('contacts')}}">Контакты</a></li>
+                            <li><a href="{{route('home')}}">Отзывы</a></li>
+                            <li><a href="#">Лицензия</a></li>
+                            <li><a href="#">Договор-оферта</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
                         <h3 class="footer_title">
-                            Subscribe
+                            Подписка
                         </h3>
-                        <form action="{{route('email')}}" method="post" class="newsletter_form">
-                            @csrf
-                            <input type="email" id="email" name="email" placeholder="Enter your mail">
-                            <button type="submit">Subscribe</button>
+                        <form action="#" class="newsletter_form">
+                            <input type="text" placeholder="Введите ваш E-mail">
+                            <button type="submit">Подписаться</button>
                         </form>
-                        <p class="newsletter_text">Подписаться на рассылку полезной информации.</p>
+                        <p class="newsletter_text">Подпишитесь и получайте актуальную информацию о новых программах и скидках.</p>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
     </div>
     <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
         <div class="container">
@@ -122,9 +106,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <p class="copy_right text-center">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://vk.com/loveme.ayanami" target="_blank">loveme.ayanami</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy; Educato, <script>document.write(new Date().getFullYear());</script>
                     </p>
                 </div>
             </div>

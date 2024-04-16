@@ -64,7 +64,7 @@
                                         <li><a href="#">программы <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{{route('tests')}}">конструктор курсов </a></li>
-                                                <li><a href="courses.html">готовые курсы </a></li>
+                                                <li><a href="{{route('ready')}}">готовые курсы </a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('my')}}">обучение </a></li>
@@ -223,8 +223,8 @@
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="footer_logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="">
+                            <a href="{{route('home')}}">
+                                <img src="{{URL::asset('images/logo.png')}}" style="width: 78%;" alt="">
                             </a>
                         </div>
                         <p>
@@ -250,10 +250,10 @@
                             Обучение
                         </h3>
                         <ul>
-                            <li><a href="#">Программы</a></li>
-                            <li><a href="#">Курсы</a></li>
+                            <li><a href="{{route('tests')}}">Программы</a></li>
+                            <li><a href="{{route('tests')}}">Курсы</a></li>
                             <li><a href="#">Акции</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="{{route('contacts')}}">FAQ</a></li>
                         </ul>
 
                     </div>
@@ -264,8 +264,8 @@
                             Информация
                         </h3>
                         <ul>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="{{route('contacts')}}">Контакты</a></li>
+                            <li><a href="{{route('home')}}">Отзывы</a></li>
                             <li><a href="#">Лицензия</a></li>
                             <li><a href="#">Договор-оферта</a></li>
                         </ul>
