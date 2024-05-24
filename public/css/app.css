@@ -18681,7 +18681,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_bg_2 {
-    background-image: url(../images/banner/banner_2.png);
+    background-image: url(../images/banner_2.png);
 }
 
 /* line 7, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
@@ -19802,6 +19802,9 @@ h3 {
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
     background-image: url(../images/banner.png);
+}
+.bradcam_bg_2 {
+    background-image: url(../images/banner_2.png);
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
@@ -26364,4 +26367,10 @@ background-color: white;
 .svo {
     align-items: center;
 
+}
+.pod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

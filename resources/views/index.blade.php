@@ -118,7 +118,7 @@
                     <div class="col-lg-4 col-xl-3 col-md-6">
                         <div class="single_catagory">
                             <img src="{{URL::asset('images/m-'.$tes->id.'.jpg')}}" alt="" class="img-fluid">
-                            <a href="{{route('tests')}}"><h4>{{$tes->title}}</h4></a>
+                            <a href="{{route('item', ['id'=>$tes->id])}}"><h4>{{$tes->title}}</h4></a>
                             @if($tes->theme_id==1)<p> <span>{{$tes->theme_id}}</span> неделя</p>@endif
                             @if($tes->theme_id<5 && $tes->theme_id>1)<p> <span>{{$tes->theme_id}}</span> недели</p>@endif
                             @if($tes->theme_id>=5)<p> <span>{{$tes->theme_id}}</span> недель</p>@endif

@@ -26,7 +26,6 @@ class MainController extends Controller
 
     public function tests(FilterRequest $request) {
         if ($request->filled('theme')) {
-
             $tests=Test::where('theme_id', '=', $request->theme)->get();
         }
         else $tests = Test::get();
@@ -34,9 +33,7 @@ class MainController extends Controller
         if ($request->filled('text')) {
             $tests=Test::where('title', 'like', '%'.$request->text.'%')->get();
         }
-        return view('test',['tests'=>$tests,
-            'themes'=>Theme::get(),
-            'questions'=>Question::get()]);
+        return view('test',['tests'=>$tests,]);
     }
 
     public function contacts(QnARequest $request) {
@@ -53,30 +50,6 @@ class MainController extends Controller
                 return view('contact', ['model' => false]);
         }
         return view('contact', ['model'=>true]);
-    }
-    public function themes() {
-        return view('themes', ['themes'=>Theme::get()]);
-    }
-    public function add(FilterRequest $request) {
-        if ($request->isMethod('post'))
-        return view('admin');
-        else return view('add');
-    }
-    public function admin(AddRequest $request) {
-        return view('admin', ['id'=>$request->id]);
-    }
-    public function quiz(QuizRequest $request) {
-        if($request->isMethod('post'))
-
-            return view('quiz', ['q'=>$request->q, 'answer_id'=>$request->answer_id, 'title'=>$request->id]);
-        return view('quiz', ['title'=>$request->id]);
-    }
-    public function email(EmailRequest $request) {
-        if($request->isMethod('post'))
-            Email::create([
-                'email'=>$request->email
-            ]);
-        return view('thx');
     }
     public function purchase() {
         $users = DB::table('my_cources')->where('user', Auth::user()->only('email'))->get('cources');

@@ -84,9 +84,9 @@
                                     @endif
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,12 +96,13 @@
 </header>
 
 
-<div class="bradcam_area bradcam_bg_1">
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_2">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text">
-                    <h3> Найдено модулей: {{count($tests)}} </h3>
+                    <h3>веб-дизайн</h3>
                 </div>
             </div>
         </div>

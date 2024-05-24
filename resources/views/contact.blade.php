@@ -53,7 +53,7 @@
                                                     <li><a href="{{route('ready')}}">готовые курсы </a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{{route('tests')}}">обучение </a></li>
+                                            <li><a href="{{route('my')}}">обучение </a></li>
                                             <li><a href="{{route('contacts')}}">о нас </a></li>
                                             <li><a href="{{route('contacts')}}">контакты</a></li>
                                         </ul>
@@ -83,7 +83,7 @@
 
 
     <!-- bradcam_area  -->
-    <div class="bradcam_area bradcam_bg_1">
+    <div class="bradcam_area bradcam_bg_2">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">

@@ -101,7 +101,7 @@
 
 
 <!-- bradcam_area  -->
-<div class="bradcam_area bradcam_bg_1">
+<div class="bradcam_area bradcam_bg_2">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -131,7 +131,7 @@
             <div class="col-lg-4 col-xl-4 col-md-6">
                 <div class="single_catagory">
                     <img src="{{URL::asset('images/k-1.jpg')}}" alt="" class="img-fluid">
-                    <a href="jobs.html"><h4><br>{{$cource->name}}</h4></a>
+                    <a href=""><h4><br>{{$cource->name}}</h4></a>
                     <p>– Насмотренность в дизайне
                         <br>– Основы Adobe Photoshop и Illustrator
                         <br>– Figma: от основ до дизайн-макета
